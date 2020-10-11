@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.annotation.Resource;
 import javax.servlet.http.HttpServletResponse;
 import java.io.OutputStream;
 import java.net.URLEncoder;
@@ -18,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 @RestController
 public class FastDFSController {
 
-    @Autowired
+    @Resource
     private FastFileStorageClient client;
 
     private ConcurrentHashMap<Integer,String> map=new ConcurrentHashMap<>();
