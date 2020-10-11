@@ -22,7 +22,7 @@ public class FastDFSController {
     @Resource
     private FastFileStorageClient client;
 
-    private ConcurrentHashMap<Integer,String> map=new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<Integer,String> map=new ConcurrentHashMap<>();
 
     @RequestMapping("/upload")
     public String upload(@RequestParam MultipartFile file){
